@@ -1,0 +1,22 @@
+html{
+margin-top: 50px;
+}
+
+a {
+color:#00c48d;
+}
+
+.btn{
+background-color:#00c48d;
+border:none;
+}
+
+a:hover {
+    color:#00c48d;
+    text-decoration:none;
+}
+
+.btn:hover{
+background-color:#00c48d;
+border:none;
+}

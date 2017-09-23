@@ -1,0 +1,18 @@
+{% extends 'posts/base.html' %}
+{% block head_title %}
+    {{post.title}} | Try Django 1.9
+{% endblock head_title %}
+
+{% block content %}
+<div class="row justify-content-md-center">
+    <div class="col-sm-10">
+        <h1>{{ post.title }}</h1>
+        {% if post.image %}
+            <img class="card-img-top img-responsive" src="{{post.image.url}}" alt="Card image cap">
+        {% endif %}
+        <article>{{ post.content | linebreaks }}</article>
+    </div>
+</div>
+{% endblock content %}
+
+

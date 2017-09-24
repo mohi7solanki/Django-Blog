@@ -1,0 +1,43 @@
+#heading {
+color:#00c48d;
+}
+
+body {
+    padding-top: 90px;
+  }
+
+.btn{
+background-color:#00c48d;
+border:none;
+}
+
+a:hover {
+    color:#00c48d;
+    text-decoration:none;
+}
+
+.btn:hover{
+background-color:#00c48d;
+border:none;
+}
+
+.navbar {
+  margin-bottom:1cm;
+  background-color: #00c48d;
+}
+
+a{
+color:white;
+}
+#search_button{
+color:white;
+}
+.page-link{
+   color:white;
+  background-color: #00c48d;
+}
+
+.page-link:hover{
+   color:white;
+  background-color: #00c48d;
+}

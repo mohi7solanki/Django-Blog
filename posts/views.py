@@ -1,15 +1,29 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect
+from urllib.parse import quote
+from django.http import HttpResponseRedirect, Http404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Post
+from django.db.models import Q
 from .forms import PostForm
 from django.urls import reverse
 from django.contrib import messages
+from django.utils import timezone
 
 
 def post_list(request):
-    all_posts = Post.objects.order_by('-timestamp')
-    paginator = Paginator(all_posts, 5)
+    if not request.user.is_authenticated:
+        all_posts = Post.objects.active()
+    else:
+        all_posts = Post.objects.all()
+    query = request.GET.get('q')
+    if query:
+        all_posts = all_posts.filter(
+            Q(title__icontains = query)|
+            Q(content__icontains=query) |
+            Q(author__first_name__icontains=query) |
+            Q(author__last_name__icontains=query)
+            ).distinct()
+    paginator = Paginator(all_posts, 1)
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -25,13 +39,20 @@ def post_list(request):
 
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
+    if post.draft or post.publish > timezone.now().date():
+        if not request.user.is_authenticated:
+            raise Http404
+    share_string = quote(post.content)
     context = {
         'post':post,
+        'share_string':share_string,
     }
     return render(request, 'posts/detail.html', context)
 
 
 def post_create(request):
+    if not request.user.is_authenticated:
+        raise Http404
     form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         form.save()
@@ -44,6 +65,8 @@ def post_create(request):
 
 
 def post_update(request, slug):
+    if not request.user.is_authenticated:
+        raise Http404
     post = get_object_or_404(Post, slug=slug)
     form = PostForm(request.POST or None, request.FILES or None, instance=post)
     if form.is_valid():
@@ -57,6 +80,8 @@ def post_update(request, slug):
 
 
 def post_delete(request, slug):
+    if not request.user.is_authenticated:
+        raise Http404
     post = get_object_or_404(Post, slug=slug)
     post.delete()
     messages.success(request, 'Successfully deleted!')

@@ -23,7 +23,7 @@ def post_list(request):
             Q(author__first_name__icontains=query) |
             Q(author__last_name__icontains=query)
             ).distinct()
-    paginator = Paginator(all_posts, 1)
+    paginator = Paginator(all_posts, 5)
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)

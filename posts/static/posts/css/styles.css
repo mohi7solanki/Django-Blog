@@ -21,17 +21,16 @@ background-color:#00c48d;
 border:none;
 }
 
-.navbar {
-  margin-bottom:1cm;
-  background-color: #00c48d;
-}
-
 a{
 color:white;
 }
+
 #search_button{
 color:white;
+font-size: 130%;
+
 }
+
 .page-link{
    color:white;
   background-color: #00c48d;
@@ -40,4 +39,41 @@ color:white;
 .page-link:hover{
    color:white;
   background-color: #00c48d;
+}
+
+.navbar {
+    background-color: #00c48d;
+    height: 60px;
+}
+
+.nav-link{
+  color: white;
+  position: relative;
+  left: 90px;
+  font-size: 120%;
+}
+
+.navbar-brand{
+  position: relative;
+  left: 80px;
+}
+
+.form-inline{
+  position: relative;
+  right: 80px;
+}
+
+img {
+    width: 100%;
+}
+
+.wmd-panel{
+  margin-left:0px !important;
+  margin-right: 0px !important;
+  width: 100% !important;
+
+}
+
+form {
+  margin-bottom: 30px;
 }

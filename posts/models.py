@@ -3,7 +3,6 @@ from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from django.conf import settings
 from django.utils import timezone
-from django.db.models import Q
 
 
 class PostManager(models.Manager):

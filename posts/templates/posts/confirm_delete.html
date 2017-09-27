@@ -1,0 +1,14 @@
+{% extends 'posts/base.html' %}
+
+{% block head_title %}
+    Delete Post | Try Django 1.9
+{% endblock head_title %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <p class="lead">Are you sure you want to delete {{ post }} ?</p>
+        <input type="submit" value="Confirm" class="btn btn-warning">
+        <a class="btn btn-default" style="color:black" href="{% url 'posts:index' %}">Cancel</a>
+    </form>
+{% endblock content %}

@@ -83,9 +83,14 @@ def post_delete(request, slug):
     if not request.user.is_authenticated:
         raise Http404
     post = get_object_or_404(Post, slug=slug)
-    post.delete()
-    messages.success(request, 'Successfully deleted!')
-    return HttpResponseRedirect(reverse('posts:index'))
+    if request.method == 'POST':
+        post.delete()
+        messages.success(request, 'Successfully deleted!')
+        return HttpResponseRedirect(reverse('posts:index'))
+    context = {
+        'post': post,
+    }
+    return render(request, 'posts/confirm_delete.html', context)
 
 
 

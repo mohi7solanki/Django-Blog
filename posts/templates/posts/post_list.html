@@ -8,7 +8,7 @@
     {% endif %}
   <div class="card-body">
     <h4 class="card-title"><a id="heading" href="{% url 'posts:detail' slug=post.slug %}">{{ post.title }}</a>&nbsp;&nbsp;<small class="text-muted">{{post.publish}}</small></h4>
-    <p class="card-text content-markdown">{{ post.content }}</p>
+    <p class="card-text">{{ post.content |safe }}</p>
       <p><small class="text-muted">-By: {{ post.author.get_full_name }}</small></p>
     <a href="{% url 'posts:detail' slug=post.slug %}" class="btn btn-outline-light">view</a>
   </div>

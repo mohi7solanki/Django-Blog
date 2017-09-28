@@ -17,7 +17,7 @@
             <img class="card-img-top img-responsive" src="{{post.image.url}}" alt="Card image cap">
         {% endif %}
         <hr>
-        <p class="content-markdown">{{ post.content }}</p>
+        <p>{{ post.content| safe }}</p>
         <p><div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></p>
         <hr>
         <!--<a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">Facebook</a>-->

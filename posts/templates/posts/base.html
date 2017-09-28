@@ -49,23 +49,19 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
-
 <script type="text/javascript">
   $(document).ready(function() {
-    $(".content-markdown").each(function(){
-
-      var content = $(this).text()
-      var markedContent = marked(content)
-      $(this).html(markedContent)
-
-    })
-    $(".content-markdown img").each(function(){
-
-      $(this).addClass("img-responsive")
-
-    })
+    tinymce.init({
+    selector:'.editor',
+    setup: function (editor) {
+        editor.on('submit', function (e) {
+            editor.save();
+        });
+    }
+ });
   })
 </script>
+
+
 </body>
 </html>

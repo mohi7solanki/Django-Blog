@@ -3,6 +3,7 @@ from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from django.conf import settings
 from django.utils import timezone
+from tinymce import HTMLField
 
 
 class PostManager(models.Manager):
@@ -17,7 +18,7 @@ def upload_location(instance, filename):
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
     title = models.CharField(max_length=150)
-    content = models.TextField()
+    content = HTMLField('Content')
     image = models.ImageField(null=True, blank=True,
                               width_field="width_field",
                               height_field="height_field",

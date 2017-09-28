@@ -17,9 +17,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tinymce',
     'crispy_forms',
     'markdown_deux',
-    'pagedown',
     'posts.apps.PostsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -28,6 +28,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 360,
+    'width':1110,
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 20,
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': 'textcolor save link image media preview codesample contextmenu table code lists fullscreen insertdatetime nonbreaking contextmenu directionality searchreplace wordcount visualblocks visualchars code fullscreen autolink lists charmap print hr anchor pagebreak',
+    'toolbar1': 'save fullscreen bold italic underline,fontselect,fontsizeselect | forecolor backcolor | alignleft aligncenter alignright alignjustify' '| bullist numlist | outdent indent | table | link image media | codesample | preview code |',
+    'contextmenu': 'formats | link image',
+    'menubar': True,
+    'statusbar': False,
+    }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

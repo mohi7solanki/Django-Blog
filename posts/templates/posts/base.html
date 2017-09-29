@@ -7,6 +7,7 @@
     <title>{% block head_title %}Try Django 1.9{% endblock head_title %}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'posts/css/styles.css' %}"/>
+    <link rel="stylesheet" href="{% static 'posts/css/default.css' %}"/>
     {% block head_extra %}{% endblock head_extra %}
 </head>
 <body>
@@ -49,19 +50,7 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    tinymce.init({
-    selector:'.editor',
-    setup: function (editor) {
-        editor.on('submit', function (e) {
-            editor.save();
-        });
-    }
- });
-  })
-</script>
-
-
+<script src="{% static 'posts/css/highlight.pack.js' %}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

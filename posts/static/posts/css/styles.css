@@ -4,9 +4,13 @@ color:#00c48d;
 
 body {
     padding-top: 90px;
-  }
+}
 
-.btn{
+.navbar{
+  background-color:#00c48d;
+}
+
+.btn:not(.danger){
 background-color:#00c48d;
 border:none;
 }
@@ -16,19 +20,13 @@ a:hover {
     text-decoration:none;
 }
 
-.btn:hover{
+.btn:hover:not(.danger){
 background-color:#00c48d;
 border:none;
 }
 
 a{
 color:white;
-}
-
-#search_button{
-color:white;
-font-size: 130%;
-
 }
 
 .page-link{
@@ -41,27 +39,6 @@ font-size: 130%;
   background-color: #00c48d;
 }
 
-.navbar {
-    background-color: #00c48d;
-    height: 60px;
-}
-
-.nav-link{
-  color: white;
-  position: relative;
-  left: 90px;
-  font-size: 120%;
-}
-
-.navbar-brand{
-  position: relative;
-  left: 80px;
-}
-
-.form-inline{
-  position: relative;
-  right: 80px;
-}
 
 img {
     width: 100%;

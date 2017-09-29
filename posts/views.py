@@ -59,7 +59,7 @@ def post_create(request):
         messages.success(request, 'Post added succesfully!')
         return HttpResponseRedirect(reverse('posts:index'))
     context = {
-        'form':form,
+        'form': form,
     }
     return render(request, 'posts/form.html', context)
 

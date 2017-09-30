@@ -26,14 +26,14 @@ a{
 color:white;
 }
 
-.page-link{
+.pg-active{
    color:white;
   background-color: #00c48d;
 }
 
 .page-link:hover{
-   color:white;
   background-color: #00c48d;
+  color: white !important;
 }
 
 

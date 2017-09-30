@@ -16,7 +16,7 @@
         {% endif %}
       <div class="card-body">
         <h4 class="card-title"><a id="heading" href="{% url 'posts:detail' slug=post.slug %}">{{ post.title }}</a>&nbsp;&nbsp;<small class="text-muted">{{post.publish}}</small></h4>
-        <p class="card-text">{{ post.content |safe }}</p>
+        <div class="card-text img-content">{{ post.content|safe }}</div>
           <p><small class="text-muted">-By: {{ post.author.get_full_name }}</small></p>
         <a href="{% url 'posts:detail' slug=post.slug %}" class="btn btn-outline-light">view</a>
       </div>
@@ -30,16 +30,27 @@
                   <ul class="pagination">
                     <li class="page-item">
                         {% if posts.has_previous %}
-                                    <a class="page-link" href="?page={{ posts.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&laquo;</a>
+                                    <a class="page-link text-dark" href="?page={{ posts.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&laquo;</a>
                         </a></li>
                         {% else %}
                             <li class="page-item disabled">
                                   <span class="page-link">&laquo;</span>
                             </li>
                         {% endif %}
+                        <!-- <span class="current">
+                            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+                        </span> -->
+                        {% for page_no in posts.paginator.page_range %}
+                          {% if page_no == posts.number %}
+                            <li class="page-item"><a class="page-link pg-active" href="?page={{page_no}}">{{page_no}}</a></li>
+                          {% else %}
+                            <li class="page-item"><a class="page-link text-dark" href="?page={{page_no}}">{{page_no}}</a></li>
+                          {% endif %}
+                        {% endfor %}
+                  
                     <li class="page-item">
                         {% if posts.has_next %}
-                                    <a class="page-link" href="?page={{ posts.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&raquo;</a>
+                                    <a class="page-link text-dark" href="?page={{ posts.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&raquo;</a>
                         </li>
                       {% else %}
                             <li class="page-item disabled">

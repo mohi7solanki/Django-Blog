@@ -26,7 +26,7 @@ def post_list(request):
             ).distinct()
         if len(all_posts) < 1:
             error_msg = "Sorry No Posts available for given query!"
-    paginator = Paginator(all_posts, 5)
+    paginator = Paginator(all_posts, 2)
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)

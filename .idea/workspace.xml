@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f493107b-6f5c-4850-a918-80ccd77f5d1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/form.html" afterPath="$PROJECT_DIR$/posts/templates/posts/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/static/posts/css/styles.css" afterPath="$PROJECT_DIR$/posts/static/posts/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/base.html" afterPath="$PROJECT_DIR$/posts/templates/posts/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/detail.html" afterPath="$PROJECT_DIR$/posts/templates/posts/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tryDjango/settings.py" afterPath="$PROJECT_DIR$/tryDjango/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tryDjango/urls.py" afterPath="$PROJECT_DIR$/tryDjango/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,21 +30,12 @@
             <state relative-caret-position="1848">
               <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
               <folding>
-                <marker date="1506737179751" expanded="true" signature="424:1367" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="623:971" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="1245:1306" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="1300:1306" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="1401:1754" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="1506:1578" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="1633:1696" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="1782:2175" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="1935:2076" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="2092:2119" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="2209:2668" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="2423:2570" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="2586:2612" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="2845:2986" ph="..." />
-                <marker date="1506737179751" expanded="true" signature="3002:3029" ph="..." />
+                <marker date="1506737861637" expanded="true" signature="1300:1306" ph="..." />
+                <marker date="1506737861637" expanded="true" signature="1782:2119" ph="..." />
+                <marker date="1506737861637" expanded="true" signature="2092:2119" ph="..." />
+                <marker date="1506737861637" expanded="true" signature="2659:2664" ph="..." />
+                <marker date="1506737861637" expanded="true" signature="2659:2720" ph="..." />
+                <marker date="1506737861637" expanded="true" signature="2897:3038" ph="..." />
               </folding>
             </state>
           </provider>
@@ -48,9 +44,29 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tryDjango/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="957">
-              <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="1023">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <marker date="1506746733920" expanded="true" signature="499:505" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="821:1593" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="1647:2044" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2093:2562" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2099:2559" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2236:2552" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2272:2541" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2615:2690" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2705:2831" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2722:2829" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2835:2936" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2966:3360" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="2972:3069" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="3077:3164" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="3172:3260" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="3268:3357" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="3364:3440" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="3545:3646" ph="..." />
+                <marker date="1506746733920" expanded="true" signature="3692:3731" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,10 +74,11 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tryDjango/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="6" column="10" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="132">
+              <caret line="7" column="10" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+                <marker date="1506739950813" expanded="true" signature="399:400" ph="..." />
               </folding>
             </state>
           </provider>
@@ -94,8 +111,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/posts/static/posts/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,7 +123,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
-              <folding />
+              <folding>
+                <marker date="1506737843449" expanded="true" signature="435:453" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -207,7 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -264,6 +282,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,6 +375,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <marker date="1506739950813" expanded="true" signature="399:400" ph="..." />
           </folding>
         </state>
       </provider>
@@ -416,6 +436,7 @@
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <marker date="1506739950813" expanded="true" signature="399:400" ph="..." />
           </folding>
         </state>
       </provider>
@@ -478,6 +499,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <marker date="1506739950813" expanded="true" signature="399:400" ph="..." />
           </folding>
         </state>
       </provider>
@@ -575,6 +597,7 @@
           <caret line="6" column="1" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <marker date="1506739950813" expanded="true" signature="399:400" ph="..." />
           </folding>
         </state>
       </provider>
@@ -636,15 +659,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
-          <folding />
+          <folding>
+            <marker date="1506737843449" expanded="true" signature="435:453" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tryDjango/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="957">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="1023">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <marker date="1506746733920" expanded="true" signature="499:505" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="821:1593" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="1647:2044" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2093:2562" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2099:2559" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2236:2552" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2272:2541" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2615:2690" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2705:2831" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2722:2829" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2835:2936" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2966:3360" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="2972:3069" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="3077:3164" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="3172:3260" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="3268:3357" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="3364:3440" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="3545:3646" ph="..." />
+            <marker date="1506746733920" expanded="true" signature="3692:3731" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -661,10 +706,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tryDjango/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="6" column="10" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <marker date="1506739950813" expanded="true" signature="399:400" ph="..." />
           </folding>
         </state>
       </provider>
@@ -694,21 +740,12 @@
         <state relative-caret-position="1848">
           <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
           <folding>
-            <marker date="1506737179751" expanded="true" signature="424:1367" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="623:971" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="1245:1306" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="1300:1306" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="1401:1754" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="1506:1578" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="1633:1696" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="1782:2175" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="1935:2076" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="2092:2119" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="2209:2668" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="2423:2570" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="2586:2612" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="2845:2986" ph="..." />
-            <marker date="1506737179751" expanded="true" signature="3002:3029" ph="..." />
+            <marker date="1506737861637" expanded="true" signature="1300:1306" ph="..." />
+            <marker date="1506737861637" expanded="true" signature="1782:2119" ph="..." />
+            <marker date="1506737861637" expanded="true" signature="2092:2119" ph="..." />
+            <marker date="1506737861637" expanded="true" signature="2659:2664" ph="..." />
+            <marker date="1506737861637" expanded="true" signature="2659:2720" ph="..." />
+            <marker date="1506737861637" expanded="true" signature="2897:3038" ph="..." />
           </folding>
         </state>
       </provider>
@@ -723,8 +760,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/posts/static/posts/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="264">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>

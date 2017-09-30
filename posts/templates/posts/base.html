@@ -35,6 +35,10 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+          </li>
+
         </ul>
         <form class="form-inline my-2 my-lg-0" method="get" action="/">
             <div class="col-sm-10">
@@ -49,7 +53,7 @@
 </nav>
 
 
-<div class="container">
+<div class="container pt-5 mt-4">
         {% include 'posts/messages.html' %}
         {% block content %}
         {% endblock content %}
@@ -62,25 +66,16 @@
 
 <script src="{% static 'posts/css/highlight.pack.js' %}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".img-content img").each(function(){
+      $(this).addClass("img-responsive")
+       $(this).removeAttr("width")
+       $(this).removeAttr("height")
+
+    })
+  })
+</script>
 </body>
 </html>
-
-<!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <a style="color: white" class="navbar-brand" href="/"><h2>Blog</h2></a>
-  <button style="color: white" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span style="color: white" class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a style="color: white" class="nav-link" href="{% url 'posts:index' %}">Home <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0" method="get" action="">
-      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search Posts" value="{{ request.GET.q }}" aria-label="Search">
-      <button id="search_button" class="btn my-2 my-sm-0" type="submit">Search</button>
-    </form>
-
-  </div>
-</nav> -->
+ 

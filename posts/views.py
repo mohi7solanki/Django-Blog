@@ -64,6 +64,7 @@ def post_create(request):
         return HttpResponseRedirect(reverse('posts:index'))
     context = {
         'form': form,
+        'status': 'Create'
     }
     return render(request, 'posts/form.html', context)
 
@@ -79,6 +80,7 @@ def post_update(request, slug):
         return HttpResponseRedirect(reverse('posts:detail', args=(slug,)))
     context = {
         'form':form,
+        'status': 'Edit'
     }
     return render(request, 'posts/form.html', context)
 

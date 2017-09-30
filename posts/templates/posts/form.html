@@ -2,15 +2,15 @@
 {% load crispy_forms_tags %}
 
 {% block head_title %}
-    Create Post | Try Django 1.9
+    {{ status }} | Try Django 1.9
 {% endblock head_title %}
 {% block head_extra %}
     {{ form.media }}
 {% endblock head_extra %}
 {% block content %}
-    <form action="" method="post" enctype="multipart/form-data">
+    <form class="mb-5" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form|crispy }}
-        <input type="submit" value="Create Post">
+        <input class="btn text-white" type="submit" value="{{ status }} Post">
     </form>
 {% endblock content %}

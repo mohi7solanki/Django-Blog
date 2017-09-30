@@ -16,6 +16,7 @@ def post_list(request):
     else:
         all_posts = Post.objects.all()
     query = request.GET.get('q')
+    error_msg = ''
     if query:
         all_posts = all_posts.filter(
             Q(title__icontains = query)|
@@ -23,6 +24,8 @@ def post_list(request):
             Q(author__first_name__icontains=query) |
             Q(author__last_name__icontains=query)
             ).distinct()
+        if len(all_posts) < 1:
+            error_msg = "Sorry No Posts available for given query!"
     paginator = Paginator(all_posts, 5)
     page = request.GET.get('page')
     try:
@@ -33,6 +36,7 @@ def post_list(request):
         posts = paginator.page(paginator.num_pages)
     context = {
         'posts': posts,
+        'error_msg': error_msg,
     }
     return render(request, 'posts/post_list.html', context)
 

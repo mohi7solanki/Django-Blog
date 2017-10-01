@@ -33,12 +33,10 @@
                         </a></li>
                         {% else %}
                             <li class="page-item disabled">
-                                  <span class="page-link">&laquo;</span>
+                                  <span style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;" class="page-link">&laquo;</span>
                             </li>
                         {% endif %}
-                        <!-- <span class="current">
-                            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
-                        </span> -->
+
                         {% for page_no in posts.paginator.page_range %}
                           {% if page_no == posts.number %}
                             <li class="page-item"><a class="page-link pg-active" href="?page={{page_no}}">{{page_no}}</a></li>

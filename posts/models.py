@@ -11,8 +11,11 @@ class PostManager(models.Manager):
         return super(PostManager, self).filter(draft=False).filter(publish__lte=timezone.now())
 
 
+# def upload_location(instance, filename):
+#     return f'{instance.slug}/{filename}'
+
 def upload_location(instance, filename):
-    return f'{instance.slug}/{filename}'
+    return '{}/{}'.format(instance.slug, filename)
 
 
 class Post(models.Model):

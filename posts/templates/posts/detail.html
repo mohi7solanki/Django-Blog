@@ -8,7 +8,7 @@
     <div class="col-md-8">
         <h1>{{ post.title }}</h1>
         <p><small>--By: {{ post.author.get_full_name }}</small></p>
-        <small class="text-muted"><i class="fa fa-calendar mr-1" aria-hidden="true"></i>{{ post.publish }}</small>
+        <small class="text-muted"><i class="fa fa-calendar ml-1 mr-1" aria-hidden="true"></i>{{ post.publish }}</small>
 
         {% if post.draft %}
             <span style="color:red">Draft</span>

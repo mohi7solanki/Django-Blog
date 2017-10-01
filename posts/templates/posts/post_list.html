@@ -18,7 +18,7 @@
         <h4 class="card-title"><a id="heading" href="{% url 'posts:detail' slug=post.slug %}">{{ post.title }}</a>&nbsp;&nbsp;<small class="text-muted">{{post.publish}}</small></h4>
         <div class="card-text img-content">{{ post.content|safe }}</div>
           <p><small class="text-muted">-By: {{ post.author.get_full_name }}</small></p>
-        <a href="{% url 'posts:detail' slug=post.slug %}" class="btn btn-outline-light">view</a>
+        <a href="{% url 'posts:detail' slug=post.slug %}" class="btn btn-block text-white">Read More</a>
       </div>
     </div>
     </div>

@@ -1,9 +1,16 @@
 {% extends 'posts/base.html' %}
+{% load namify %}
 {% block head_title %}
     {{post.title}} | Try Django 1.9
 {% endblock head_title %}
 
 {% block content %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item green-color"><a class="green-color" href="/">Home</a></li>
+    {% for i in post.get_slug_list_for_categories %}
+       <li class="breadcrumb-item"><a class="green-color" href="/category/{{ i }}">{{ i | get_name |capfirst }}</a></li>
+    {% endfor %}
+</ol>
 <div class="row">
     <div class="col-md-8">
         <h1>{{ post.title }}</h1>

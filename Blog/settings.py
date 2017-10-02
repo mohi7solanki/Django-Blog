@@ -17,6 +17,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'mptt',
     'filebrowser',
     'tinymce',
     'crispy_forms',

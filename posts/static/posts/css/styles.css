@@ -22,10 +22,6 @@ background-color:#00c48d;
 border:none;
 }
 
-a{
-color:white;
-}
-
 .pg-active{
    color:white;
   background-color: #00c48d;
@@ -39,4 +35,12 @@ color:white;
 
 img {
     width: 100%;
+}
+
+.green-color{
+   color: #00c48d !important;
+}
+
+.breadcrumb-item{
+    font-size:13px !important;
 }

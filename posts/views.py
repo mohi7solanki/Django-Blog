@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from urllib.parse import quote
 from django.http import HttpResponseRedirect, Http404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .models import Post
+from .models import Post, Category
 from django.db.models import Q
 from .forms import PostForm
 from django.urls import reverse
@@ -97,6 +97,23 @@ def post_delete(request, slug):
         'post': post,
     }
     return render(request, 'posts/confirm_delete.html', context)
+
+
+def show_category(request, hierarchy=None):
+    category_slug = hierarchy.split('/')
+    parent = None
+    root = Category.objects.all()
+
+    for slug in category_slug[:-1]:
+        parent = root.get(parent=parent, slug = slug)
+
+    try:
+        instance = Category.objects.get(parent=parent, slug=category_slug[-1])
+    except:
+        instance = get_object_or_404(Post, slug = category_slug[-1])
+        return render(request, "posts/detail.html", {'post': instance})
+    else:
+        return render(request, 'posts/categories.html', {'instance': instance})
 
 
 

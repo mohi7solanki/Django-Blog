@@ -58,3 +58,13 @@ img {
     font-size:22px !important;
   }
 }
+
+.dropdown-menu{
+   background-color: #00c48d !important;
+   border:none !important;
+}
+
+.dropdown-menu :hover{
+   background-color: #00c48d !important;
+   border:none !important;
+}

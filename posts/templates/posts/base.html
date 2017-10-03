@@ -34,7 +34,16 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-
+            <li class="dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Category
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for category in categories %}
+                      <a class="dropdown-item text-center text-white" href="/category/{{category.get_slug_list_for_categories |last}}">{{category.name}}</a>
+                    {% endfor %}
+                </div>
+            </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
           </li>

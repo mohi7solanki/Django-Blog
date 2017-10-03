@@ -10,14 +10,14 @@
 {% if posts %}
     {% for post in posts %}
     <div class="row justify-content-center px-2 mb-3">
-    <div class="card" style="width: 50rem;">
+    <div class="card shadow" style="width: 50rem;">
+        <div class="card-body">
+        <p class="card-title text-center pb-1 h2 card-heading"><a id="heading" href="{% url 'posts:detail' slug=post.slug %}">{{ post.title }}</a></p>
+            <div class="text-center mb-2"><small class="text-muted mr-3"><i class="fa fa-calendar ml-1 mr-1" aria-hidden="true"></i>{{post.publish}}</small><small class="text-muted ml-3"><i class="fa fa-pencil mr-1" aria-hidden="true"></i>{{ post.author.get_full_name }}</small></div>
         {% if post.image %}
             <img class="card-img-top img-responsive" src="{{post.image.url}}" alt="Card image cap">
         {% endif %}
-      <div class="card-body">
-        <h4 class="card-title"><a id="heading" href="{% url 'posts:detail' slug=post.slug %}">{{ post.title }}</a>&nbsp;&nbsp;<small class="text-muted">{{post.publish}}</small></h4>
-        <div class="card-text img-content">{{ post.content|safe }}</div>
-          <p><small class="text-muted">-By: {{ post.author.get_full_name }}</small></p>
+        <div class="card-text p-2 text-justify img-content">{{ post.description }}</div>
         <a href="{% url 'posts:detail' slug=post.slug %}" class="btn btn-block text-white">Read More</a>
       </div>
     </div>

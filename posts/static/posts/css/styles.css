@@ -44,3 +44,17 @@ img {
 .breadcrumb-item{
     font-size:13px !important;
 }
+
+.shadow{
+  box-shadow: 0 10px 15px rgba(0,0,0,0.18), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.shadow-dark {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+@media screen and (max-width: 540px) {
+  .card-heading{
+    font-size:22px !important;
+  }
+}

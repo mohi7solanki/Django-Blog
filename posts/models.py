@@ -23,6 +23,7 @@ class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
     title = models.CharField(max_length=150)
     category = models.ForeignKey('Category', null=True, blank=True)
+    description = models.TextField(max_length=250)
     content = HTMLField('Content')
     image = models.ImageField(null=True, blank=True,
                               width_field="width_field",
@@ -39,19 +40,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
-    def get_slug_list_for_categories(self):
-        try:
-            ancestors = self.category.get_ancestors(include_self=True)
-        except:
-            ancestors = []
-        else:
-            ancestors = [i.slug for i in ancestors]
-        slugs = []
-        for i in range(len(ancestors)):
-            slugs.append('/'.join(ancestors[:i + 1]))
-
-        return slugs
 
     class Meta:
         ordering = ["-timestamp", "-updated"]

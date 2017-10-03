@@ -17,6 +17,7 @@ class PostForm(forms.ModelForm):
             'title',
             'author',
             'category',
+            'description',
             'content',
             'image',
             'draft',
